@@ -11,8 +11,12 @@ class Name(object):
         self.lname = lname
         self.fulname = fname + " " + lname
         self.initials = fname[0] + '.' + lname[0] + '.'
+
+    def __repr__(self):
+        return {'First name': self.fname, 'Last name': self.lname}
 def main():
      name_1= Name("Vitaliy","Koziak")
+     print(name_1.__repr__())
      print(name_1.fulname)
      print(name_1.initials)
 
